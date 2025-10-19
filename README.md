@@ -1,109 +1,96 @@
- Tower-of-Hanoi-Visualizer-using-C
+Tower-of-Hanoi-Visualizer-using-C
 A C-based console application that visualizes the Tower of Hanoi puzzle using stacks and recursion. Demonstrates stack operations, recursive problem-solving, and step-by-step visualization of disk movements.
 
- 
+Tower of Hanoi Visualizer (C Program)
 
-#include <stdio.h>
-#include <stdlib.h>
-#define MAX 10
-// Stack structure to represent each rod
-typedef struct {
-int arr[MAX];
-int top;
-char name;
-} Stack;
-// Initialize stack
-void init(Stack *s, char name) {
-s->top = -1;
-s->name = name;
-}
-// Push element onto stack
-void push(Stack *s, int val) {
-if (s->top == MAX - 1)
-return;
-s->arr[++(s->top)] = val;
-}
-// Pop element from stack
-int pop(Stack *s) {
-if (s->top == -1)
-return -1;
-return s->arr[(s->top)--];
-}
-// Display rods as arrays (for visualization)
-void displayRods(Stack A, Stack B, Stack C) {
-int i;
-printf("\nRod %c: [", A.name);
-for (i = A.top; i >= 0; i--) {
-printf("%d", A.arr[i]);
-if (i > 0) printf(", ");
-}
-printf("]\nRod %c: [", B.name);
-for (i = B.top; i >= 0; i--) {
-printf("%d", B.arr[i]);
-if (i > 0) printf(", ");
-}
-printf("]\nRod %c: [", C.name);
-for (i = C.top; i >= 0; i--) {
-printf("%d", C.arr[i]);
-if (i > 0) printf(", ");
-}
-printf("]\n---------------------------\n");
-}
-// Recursive Tower of Hanoi function
-void towerOfHanoi(int n, Stack *from, Stack *to, Stack *aux,
-int *stepCount, Stack *A, Stack *B, Stack *C) {
-if (n == 1) {
-int disk = pop(from);
-push(to, disk);
-(*stepCount)++;
-printf("Step %d: Move disk %d from %c -> %c\n",
-*stepCount, disk, from->name, to->name);
-displayRods(*A, *B, *C);
-return;
-}
-towerOfHanoi(n - 1, from, aux, to, stepCount, A, B, C);
-int disk = pop(from);
-push(to, disk);
-(*stepCount)++;
-printf("Step %d: Move disk %d from %c -> %c\n",
-*stepCount, disk, from->name, to->name);
-displayRods(*A, *B, *C);
-towerOfHanoi(n - 1, aux, to, from, stepCount, A, B, C);
-}
-// Function to compute (2^n - 1) without math.h
-int powerOfTwoMinusOne(int n) {
-int result = 1;
-int i;
-for (i = 0; i < n; i++) {
-result *= 2;
-}
-return result - 1;
-}
-int main() {
-Stack A, B, C;
-init(&A, 'A');
-init(&B, 'B');
-init(&C, 'C');
-int i, n;
-printf("--- Tower of Hanoi Visualizer ---\n");
-printf("Enter number of disks (1-%d): ", MAX);
-scanf("%d", &n);
-if (n < 1 || n > MAX) {
-printf("Invalid number of disks!\n");
-return 0;
-}
-// Initialize rod A with disks
-for (i = n; i >= 1; i--) {
-push(&A, i);
-}
-int stepCount = 0;
-printf("\nSolving Tower of Hanoi for %d disks...\n", n);
-printf("------------------------------------\n");
-towerOfHanoi(n, &A, &C, &B, &stepCount, &A, &B, &C);
-printf("\nTotal moves required: %d\n", stepCount);
-printf("Expected moves (2^n - 1): %d\n", powerOfTwoMinusOne(n));
-printf("------------------------------------\n");
-printf("Puzzle solved successfully!\n");
-return 0;
-}
+Overview
+The Tower of Hanoi Visualizer is a C-based console program that demonstrates the classic Tower of Hanoi puzzle using stacks to represent rods.
+It visually shows the movement of disks between rods and displays each intermediate step to help users understand the recursive process behind the puzzle.
 
+Table of Contents
+Technologies Used
+Prerequisites
+Setup and Execution
+Project Structure
+Program Logic
+Usage
+Output Example
+Contributing
+License
+
+ Technologies Used
+C Language – Core programming language.
+Stacks – Implemented using arrays to represent rods.
+Recursion – Solves the Tower of Hanoi puzzle step-by-step.
+Console I/O – For user interaction and visualization.
+
+Prerequisites
+Before running this project, ensure you have:
+A C compiler (e.g., GCC, Turbo C, or any IDE like Code::Blocks / VS Code with C extension)
+Basic understanding of recursion and stack operations
+
+Setup and Execution
+Clone the repository:
+git clone <your_repository_url>
+cd TowerOfHanoiVisualizer
+
+Compile the program:
+gcc tower_of_hanoi.c -o tower
+
+Run the program:
+./tower
+
+Follow on-screen instructions:
+Enter the number of disks (e.g., between 1 and 10)
+Watch the program display each step of the solution
+
+Project Structure
+TowerOfHanoiVisualizer/
+├── tower_of_hanoi.c     
+├── README.md             
+└── (optional) output.txt 
+
+Program Logic
+Stack Structure
+Each rod is represented as a stack holding disks.
+Disks are integers, with smaller numbers representing smaller disks.
+Recursive Algorithm
+Move n-1 disks to the auxiliary rod.
+Move the largest disk to the destination rod.
+Move the n-1 disks from auxiliary to destination.
+Visualization
+After every move, rods are printed showing current disk arrangement.
+
+Usage
+When you run the program, you’ll see something like this:
+--- Tower of Hanoi Visualizer ---
+Enter number of disks (1–10): 3
+
+Solving Tower of Hanoi for 3 disks...
+------------------------------------
+Step 1: Move disk 1 from A -> C
+Rod A: [3, 2]
+Rod B: []
+Rod C: [1]
+---------------------------
+Step 2: Move disk 2 from A -> B
+Rod A: [3]
+Rod B: [2]
+Rod C: [1]
+---------------------------
+...
+Total moves required: 7
+Expected moves (2^n - 1): 7
+Puzzle solved successfully!
+
+Contributing
+Contributions are welcome!
+If you’d like to improve or add features:
+Fork the repository
+Create a new branch: git checkout -b feature-branch
+Commit changes: git commit -m "Added new feature"
+Push to your fork and submit a Pull Request
+
+License
+This project is licensed under the MIT License.
+Feel free to modify, use, and share for learning purposes.
