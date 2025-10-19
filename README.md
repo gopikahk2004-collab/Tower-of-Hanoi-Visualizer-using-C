@@ -11,23 +11,14 @@ It visually shows the movement of disks between rods and displays each intermedi
 Table of Contents
 
 Technologies Used
-
 Prerequisites
-
 Setup and Execution
-
 Project Structure
-
 Program Logic
-
 Usage
-
 Output Example
-
 Contributing
-
 License
-
 Technologies Used
 
 C Language – Core programming language.
@@ -61,8 +52,11 @@ Watch the program display each step of the solution
 Project Structure
 
 TowerOfHanoiVisualizer/
-├── tower_of_hanoi.c     
-├── README.md             
+
+├── tower_of_hanoi.c  
+
+├── README.md  
+
 └── (optional) output.txt 
 
 Program Logic
