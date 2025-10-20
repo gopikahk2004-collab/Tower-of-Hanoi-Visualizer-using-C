@@ -79,13 +79,21 @@ After every move, rods are printed showing current disk arrangement.
 Usage
 
 When you run the program, you’ll see something like this:
+
 --- Tower of Hanoi Visualizer ---
+
 Enter number of disks (1-10): 3
+
 Step 1: Move disk 1 from A -> C
+
 Step 2: Move disk 2 from A -> B
+
 Step 3: Move disk 1 from C -> B
+
 Step 4: Move disk 3 from A -> C
+
 ...
+
 Puzzle solved successfully!
 
 Contributing
