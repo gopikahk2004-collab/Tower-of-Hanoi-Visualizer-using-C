@@ -11,14 +11,23 @@ It visually shows the movement of disks between rods and displays each intermedi
 Table of Contents
 
 Technologies Used
+
 Prerequisites
+
 Setup and Execution
+
 Project Structure
+
 Program Logic
+
 Usage
+
 Output Example
+
 Contributing
+
 License
+
 Technologies Used
 
 C Language – Core programming language.
@@ -33,10 +42,6 @@ A C compiler (e.g., GCC, Turbo C, or any IDE like Code::Blocks / VS Code with C 
 Basic understanding of recursion and stack operations
 
 Setup and Execution
-
-Clone the repository:
-git clone <your_repository_url>
-cd TowerOfHanoiVisualizer
 
 Compile the program:
 gcc tower_of_hanoi.c -o tower
