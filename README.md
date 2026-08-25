@@ -81,7 +81,7 @@ Usage:
 
 When you run the program, you’ll see something like this:
 
---- Tower of Hanoi Visualizer ---
+-- Tower of Hanoi Visualizer  --
 
 Enter number of disks (1-10): 3
 
