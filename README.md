@@ -4,7 +4,6 @@ Tower of Hanoi Visualizer (C Program)
 A C-based console application that visualizes the Tower of Hanoi puzzle using stacks and recursion. Demonstrates stack operations, recursive problem-solving, and step-by-step visualization of disk movements.
 
 Overview:
-
 The Tower of Hanoi Visualizer is a C-based console program that demonstrates the classic Tower of Hanoi puzzle using stacks to represent rods.
 It visually shows the movement of disks between rods and displays each intermediate step to help users understand the recursive process behind the puzzle.
 
