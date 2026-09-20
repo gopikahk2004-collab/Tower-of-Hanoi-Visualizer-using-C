@@ -8,6 +8,7 @@ The Tower of Hanoi Visualizer is a C-based console program that demonstrates the
 It visually shows the movement of disks between rods and displays each intermediate step to help users understand the recursive process behind the puzzle.
 
 Table of Contents
+
 Technologies Used
 
 Prerequisites
