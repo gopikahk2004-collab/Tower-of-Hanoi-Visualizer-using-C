@@ -27,7 +27,6 @@ Contributing
 
 License
 
-
 Technologies Used:
 
 C Language – Core programming language.
