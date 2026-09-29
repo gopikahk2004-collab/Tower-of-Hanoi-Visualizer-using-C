@@ -92,7 +92,6 @@ Step 4: Move disk 3 from A -> C
 Puzzle solved successfully!
 
 Contributing:
-
 Contributions are welcome!
 If you’d like to improve or add features:
 Fork the repository
