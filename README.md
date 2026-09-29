@@ -17,7 +17,6 @@ Setup and Execution
 Project Structure
 
 Program Logic
-
 Usage
 
 Output Example
