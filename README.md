@@ -6,7 +6,7 @@ Overview:
 The Tower of Hanoi Visualizer is a C-based console program that demonstrates the classic Tower of Hanoi puzzle using stacks to represent rods.
 It visually shows the movement of disks between rods and displays each intermediate step to help users understand the recursive process behind the puzzle.
 
-Table of Contents
+Table of Contents:
 
 Technologies Used
 
